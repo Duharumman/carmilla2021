@@ -47,63 +47,76 @@ class _post extends State<Post> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: <Widget>[
+                  SizedBox(height: 20.0),
+
                   Padding(
                     padding: const EdgeInsets.all(5.0),
-                    child: Container(
-                      padding: EdgeInsets.only(left: 16, right: 16),
+                    child: new Container(
+                      //  child: new Text ("Item#$index"),
+                      margin: const EdgeInsets.only(right: 100, left: 100),
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 10, vertical: 5),
                       decoration: BoxDecoration(
                           border: Border.all(color: Colors.grey, width: 2),
                           borderRadius: BorderRadius.circular(15)),
                       constraints: BoxConstraints(
-                        minHeight: 45,
-                        minWidth: double.infinity,
+                        minHeight: 10,
+                        minWidth: 50,
                       ),
+
                       child: DropdownButton(
+                        isExpanded: true,
+                        iconSize: 50,
+                        // elevation: 200,
+                        dropdownColor: Theme.of(context).primaryColor,
+                        // value: "ford",
+
+                        hint: Text("Type of car  "),
                         items: [
                           DropdownMenuItem(
-                            value: 1,
+                            value: "BMW",
                             child: Center(
                               child: Text("BMW"),
                             ),
                           ),
                           DropdownMenuItem(
-                            value: 2,
+                            value: "mercedes",
                             child: Center(
                               child: Text("mercedes"),
                             ),
                           ),
                           DropdownMenuItem(
-                            value: 3,
+                            value: "porsche",
                             child: Center(
                               child: Text("porsche"),
                             ),
                           ),
                           DropdownMenuItem(
-                            value: 4,
+                            value: "vw",
                             child: Center(
                               child: Text("vw"),
                             ),
                           ),
                           DropdownMenuItem(
-                            value: 5,
+                            value: "hyundai",
                             child: Center(
                               child: Text("hyundai"),
                             ),
                           ),
                           DropdownMenuItem(
-                            value: 6,
+                            value: "nissan",
                             child: Center(
                               child: Text("nissan"),
                             ),
                           ),
                           DropdownMenuItem(
-                            value: 7,
+                            value: "toyota",
                             child: Center(
                               child: Text("toyota"),
                             ),
                           ),
                           DropdownMenuItem(
-                            value: 8,
+                            value: "ford",
                             child: Center(
                               child: Text("ford"),
                             ),
@@ -111,15 +124,24 @@ class _post extends State<Post> {
                         ],
                         onChanged: (value) {
                           setState(() {
-                            if (value == 1)
-                              print("H");
-                            else if (value == 2)
-                              print("E");
-                            else if (value == 3)
-                              print("L");
-                            else if (value == 4) print("L");
+                            // if (value == 1)
+                            //   print("H");
+                            // else if (value == 2)
+                            //   print("E");
+                            // else if (value == 3)
+                            //   print("L");
+                            // else if (value == 4) print("L");
                           });
                         },
+                        style: TextStyle(
+                          fontSize: 18,
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold,
+                        ),
+                        underline: Container(
+                          height: 3,
+                          color: Theme.of(context).primaryColor,
+                        ),
                       ),
                     ),
                   ),
