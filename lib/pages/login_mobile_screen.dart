@@ -3,6 +3,8 @@ import 'package:yellow_carmailla/pages/sign_up_page.dart';
 import 'package:yellow_carmailla/pages/timeline.dart';
 import 'package:yellow_carmailla/sign_in/loginButton.dart';
 
+import 'nav_drawer.dart';
+
 class LoginMobile extends StatefulWidget {
   @override
   State<StatefulWidget> createState() => _LoginMobileState();
@@ -17,7 +19,7 @@ class _LoginMobileState extends State<LoginMobile> {
         elevation: 0,
         brightness: Brightness.light,
         title: Text(
-          "CARMIALLA",
+          "Sign-In",
           style: TextStyle(
             fontSize: 28,
             fontWeight: FontWeight.bold,
@@ -25,17 +27,18 @@ class _LoginMobileState extends State<LoginMobile> {
           ),
         ),
         centerTitle: true,
-        actions: [
-          Padding(
-            padding: EdgeInsets.only(right: 16),
-            child: IconButton(
-              icon: Icon(Icons.menu),
-              color: Colors.black,
-              onPressed: () {},
-            ),
-          )
-        ],
+        // actions: [
+        //   Padding(
+        //     padding: EdgeInsets.only(right: 16),
+        //     child: IconButton(
+        //       icon: Icon(Icons.menu),
+        //       color: Colors.black,
+        //       onPressed: () {},
+        //     ),
+        //   )
+        // ],
       ),
+      drawer: NavDrawer(),
       body: Center(
         child: Card(
           elevation: 10,
@@ -47,16 +50,9 @@ class _LoginMobileState extends State<LoginMobile> {
             margin: EdgeInsets.symmetric(horizontal: 30),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[
-                Text(
-                  "Sign-In",
-                  style: TextStyle(
-                    fontSize: 30.0,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                SizedBox(height: 50.0),
+                SizedBox(height: 150.0),
                 customTextField("Email", "you@example.com", Icons.mail, false),
                 SizedBox(height: 20.0),
                 customTextField("Password", "Enter Password", Icons.lock, true),
