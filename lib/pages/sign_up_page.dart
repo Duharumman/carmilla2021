@@ -2,15 +2,41 @@ import 'package:flutter/material.dart';
 import 'package:yellow_carmailla/sign_in/sign_in_button.dart';
 
 import 'login_mobile_screen.dart';
+import 'nav_drawer.dart';
 
 class SignUpPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        brightness: Brightness.light,
+        title: Text(
+          "Register",
+          style: TextStyle(
+            fontSize: 28,
+            fontWeight: FontWeight.bold,
+            color: Theme.of(context).primaryColor,
+          ),
+        ),
+        centerTitle: true,
+        // actions: [
+        //   Padding(
+        //     padding: EdgeInsets.only(right: 16),
+        //     child: IconButton(
+        //       icon: Icon(Icons.menu),
+        //       color: Colors.black,
+        //       onPressed: () {},
+        //     ),
+        //   )
+        // ],
+      ),
+      drawer: NavDrawer(),
       body: Container(
         child: Card(
           elevation: 5,
-          margin: EdgeInsets.symmetric(horizontal: 70.0, vertical: 50.0),
+          margin: EdgeInsets.symmetric(horizontal: 20.0, vertical: 20.0),
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(17.0)),
           child: Container(
@@ -21,33 +47,14 @@ class SignUpPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[
                 SizedBox(width: double.infinity),
-                Center(
-                    // child: Image.asset(
-                    //   'assets/logo_pink.png',
-                    //   height: 100.0,
-                    //   width: 100.0,
-                    // ),
-                    ),
                 SizedBox(height: 70.0),
-                Text(
-                  ' Register',
-                  style: TextStyle(
-                      fontSize: 38.0,
-                      fontWeight: FontWeight.bold,
-                      color: Theme.of(context).primaryColor),
-                ),
-                // // customTextField("Email", "you@example.com", Icons.mail, false)
                 SizedBox(height: 20.0),
-
                 customTextField("First Name", false),
                 SizedBox(height: 20.0),
-
                 customTextField('Last Name', false),
                 SizedBox(height: 20.0),
-
                 customTextField('Email', false),
                 SizedBox(height: 20.0),
-
                 customTextField('Password', true),
                 SizedBox(height: 23.0),
                 Padding(
@@ -68,27 +75,6 @@ class SignUpPage extends StatelessWidget {
                     ],
                   ),
                 ),
-                // Container(
-                //   width: double.infinity,
-                //   height: 50,
-                //   child: ElevatedButton(
-                //     style: ButtonStyle(
-                //         backgroundColor: MaterialStateProperty.all(
-                //             Theme.of(context).primaryColor)),
-                //     onPressed: () {},
-                //     child: Row(
-                //       children: [
-                //         Text(
-                //           "CREATE ACCOUNT",
-                //           style: TextStyle(
-                //               color: Colors.white,
-                //               fontSize: 20,
-                //               fontWeight: FontWeight.w600),
-                //         ),
-                //       ],
-                //     ),
-                //   ),
-                // ),
               ],
             ),
           ),

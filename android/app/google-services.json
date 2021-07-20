@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "173519170753",
+    "project_id": "carmailla-jordan",
+    "storage_bucket": "carmailla-jordan.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:173519170753:android:c0d21f047f66983040b840",
+        "android_client_info": {
+          "package_name": "com.example.yellow_carmailla"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "173519170753-is5thd4kubv5pgeo6rg244hr0ihachob.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.yellow_carmailla",
+            "certificate_hash": "798faff0c16d1d5381c950b820d5acfdcf91451d"
+          }
+        },
+        {
+          "client_id": "173519170753-bl0tev18gd7ep0qehvlbi0bmk4b112ah.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAdq0HvlFjOEnKVQ3U8Ht9QNSaN_Au7m88"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "173519170753-bl0tev18gd7ep0qehvlbi0bmk4b112ah.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
